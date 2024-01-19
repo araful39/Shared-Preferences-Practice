@@ -26,6 +26,7 @@ Future<void> main() async {
 
 class _LoginState extends State<Login> {
   TextEditingController emailController=TextEditingController();
+  TextEditingController passwordController=TextEditingController();
   @override
   Widget build(BuildContext context) {
   return Scaffold(
@@ -38,6 +39,25 @@ class _LoginState extends State<Login> {
       children: [
         TextField(
           controller: emailController,
+          decoration: InputDecoration(
+            hintText: "Email",
+            border: OutlineInputBorder(
+
+            )
+          ),
+        ),
+
+        SizedBox(
+          height: 10,
+        ),
+        TextField(
+          controller: passwordController,
+          decoration: InputDecoration(
+            hintText:"Password",
+            border: OutlineInputBorder(
+
+            )
+          ),
         ),
         SizedBox(
           height: 10,
